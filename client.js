@@ -9,7 +9,8 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: JMU");
-    conn.write("Move: up");
+    // conn.write("Move: up");
+
   });
   conn.on('data', (data) => { // interpret incoming data as text
     console.log(data.toString());
@@ -18,6 +19,7 @@ const connect = function () {
   conn.on("end", () => {
     console.log("Disconnected from server")
   });
+  return conn
 };
   module.exports = connect;
 
