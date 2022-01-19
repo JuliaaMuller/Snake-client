@@ -17,6 +17,13 @@ let connection;
     else if (key === 'm') {
         connection.write("Move: right");
     }
+    else if (key === 't') {
+      connection.write("Say: Super cool!");
+  }
+  else if (key === 'g') {
+    connection.write("Say: YUMMY!");
+}
+ 
   };
 
   const setupInput =  (conn) => {
